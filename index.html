@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>京沪高铁网上订票 - 购票流程、车次选择与出行指南</title>
+<meta name="description" content="京沪高铁网上订票实用指南，介绍官方购票渠道、车次与席别选择、购票流程、改签退票规则、进站乘车注意事项及常见问题，帮助旅客高效完成京沪高铁网上订票。">
+<meta name="keywords" content="京沪高铁网上订票,京沪高铁购票,高铁网上订票,京沪高铁车次,高铁票改签退票">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --blue-900:#0b2a52;
+    --blue-700:#134a86;
+    --blue-500:#1a6fc4;
+    --blue-100:#e8f1fb;
+    --line:#d8e3f0;
+    --ink:#1b2431;
+    --ink-2:#4a5a6e;
+    --bg:#f4f7fb;
+    --white:#ffffff;
+    --amber:#c8791a;
+    --radius:12px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.75;
+    font-size:16px;
+  }
+  a{color:var(--blue-700);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  h1,h2,h3{margin:0;line-height:1.35;font-weight:700;}
+  p{margin:0 0 14px;}
+  ul{margin:0 0 14px;padding-left:20px;}
+  li{margin-bottom:6px;}
+
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px;}
+
+  /* ---------- 顶栏 ---------- */
+  .topbar{
+    background:var(--blue-900);
+    color:#cfe0f5;
+    font-size:13px;
+  }
+  .topbar .wrap{
+    display:flex;justify-content:space-between;align-items:center;
+    min-height:38px;flex-wrap:wrap;gap:6px;
+  }
+  .topbar span{opacity:.85;}
+
+  /* ---------- 页眉 ---------- */
+  header.site{
+    background:linear-gradient(135deg,var(--blue-700) 0%,var(--blue-500) 100%);
+    color:#fff;
+    padding:22px 0 0;
+  }
+  .brandline{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:18px;flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand .mark{
+    width:46px;height:46px;border-radius:10px;
+    background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.35);
+    display:flex;align-items:center;justify-content:center;
+    font-size:22px;font-weight:700;letter-spacing:-1px;
+  }
+  .brand b{display:block;font-size:20px;letter-spacing:.5px;}
+  .brand small{display:block;font-size:12.5px;opacity:.85;letter-spacing:1px;}
+  .head-note{
+    font-size:13px;background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.28);
+    padding:8px 14px;border-radius:999px;
+  }
+  nav.main{
+    margin-top:20px;
+    display:flex;flex-wrap:wrap;gap:4px;
+    border-top:1px solid rgba(255,255,255,.22);
+    padding-top:2px;
+  }
+  nav.main a{
+    color:#eaf3ff;font-size:15px;padding:12px 16px;border-radius:8px 8px 0 0;
+    display:block;
+  }
+  nav.main a:hover{background:rgba(255,255,255,.14);text-decoration:none;}
+
+  /* ---------- 首屏 ---------- */
+  .hero{
+    background:var(--white);
+    border-bottom:1px solid var(--line);
+  }
+  .hero .wrap{
+    display:grid;grid-template-columns:1.5fr 1fr;gap:36px;
+    padding-top:38px;padding-bottom:38px;
+  }
+  .hero h1{font-size:30px;color:var(--blue-900);margin-bottom:14px;}
+  .hero .lead{font-size:16.5px;color:var(--ink-2);}
+  .hero .lead strong{color:var(--blue-700);}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;}
+  .btn{
+    display:inline-block;padding:11px 22px;border-radius:8px;
+    font-size:15px;font-weight:600;border:1px solid transparent;
+  }
+  .btn-primary{background:var(--blue-500);color:#fff;}
+  .btn-primary:hover{background:var(--blue-700);text-decoration:none;}
+  .btn-ghost{background:#fff;color:var(--blue-700);border-color:var(--blue-500);}
+  .btn-ghost:hover{background:var(--blue-100);text-decoration:none;}
+
+  .quick{
+    background:var(--blue-100);
+    border:1px solid #cfe1f6;
+    border-radius:var(--radius);
+    padding:20px 22px;
+  }
+  .quick h2{font-size:16px;color:var(--blue-900);margin-bottom:12px;}
+  .quick ol{margin:0;padding-left:20px;font-size:14.5px;color:var(--ink-2);}
+  .quick ol li{margin-bottom:9px;}
+
+  /* ---------- 通用区块 ---------- */
+  section.block{padding:44px 0;}
+  section.block.alt{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sec-head{margin-bottom:26px;}
+  .sec-head h2{font-size:23px;color:var(--blue-900);}
+  .sec-head p{color:var(--ink-2);font-size:15px;margin-top:8px;margin-bottom:0;}
+
+  .grid{display:grid;gap:20px;}
+  .g3{grid-template-columns:repeat(3,1fr);}
+  .g2{grid-template-columns:repeat(2,1fr);}
+
+  .card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+  }
+  section.block.alt .card{background:#fafcff;}
+  .card h3{font-size:17px;color:var(--blue-700);margin-bottom:10px;}
+  .card p{font-size:14.8px;color:var(--ink-2);margin-bottom:0;}
+  .card ul{font-size:14.8px;color:var(--ink-2);margin-bottom:0;}
+
+  /* ---------- 车次与席别 ---------- */
+  .train-table{
+    width:100%;border-collapse:collapse;font-size:14.6px;background:#fff;
+    border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  }
+  .train-table caption{
+    text-align:left;font-size:14px;color:var(--ink-2);padding:0 0 10px;
+  }
+  .train-table th,.train-table td{
+    padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;
+  }
+  .train-table th{background:var(--blue-100);color:var(--blue-900);font-weight:600;}
+  .train-table tr:last-child td{border-bottom:none;}
+
+  /* ---------- 步骤 ---------- */
+  .steps{counter-reset:step;display:grid;gap:16px;}
+  .step{
+    background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue-500);
+    border-radius:8px;padding:16px 20px 16px 22px;
+    display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;
+  }
+  .step .num{
+    counter-increment:step;
+    width:32px;height:32px;border-radius:50%;
+    background:var(--blue-500);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:15px;
+  }
+  .step .num::before{content:counter(step);}
+  .step h3{font-size:16.5px;color:var(--blue-900);margin-bottom:6px;}
+  .step p{font-size:14.6px;color:var(--ink-2);margin-bottom:0;}
+
+  /* ---------- 提示条 ---------- */
+  .notice{
+    background:#fff8ec;border:1px solid #f0dcb8;border-radius:var(--radius);
+    padding:18px 22px;font-size:14.8px;color:#6b4a12;
+  }
+  .notice h3{font-size:16px;color:var(--amber);margin-bottom:8px;}
+  .notice ul{margin-bottom:0;}
+
+  /* ---------- FAQ ---------- */
+  .faq{display:grid;gap:12px;}
+  details{
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:14px 20px;
+  }
+  details[open]{border-color:#bcd6f2;box-shadow:0 2px 10px rgba(19,74,134,.06);}
+  summary{
+    cursor:pointer;font-weight:600;font-size:15.6px;color:var(--blue-900);
+    list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"＋";color:var(--blue-500);font-weight:700;}
+  details[open] summary::after{content:"－";}
+  details p{margin:12px 0 0;font-size:14.8px;color:var(--ink-2);}
+
+  /* ---------- 侧栏式双栏 ---------- */
+  .two-col{display:grid;grid-template-columns:2fr 1fr;gap:32px;align-items:start;}
+  .side-box{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 22px;margin-bottom:18px;
+  }
+  .side-box h3{font-size:16px;color:var(--blue-700);margin-bottom:10px;}
+  .side-box ul{font-size:14.6px;color:var(--ink-2);margin-bottom:0;}
+
+  /* ---------- 页脚 ---------- */
+  footer.site{
+    background:var(--blue-900);color:#b9cde6;font-size:14px;
+    padding:36px 0 26px;margin-top:10px;
+  }
+  footer.site .cols{
+    display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:28px;
+    padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.16);
+  }
+  footer.site h4{color:#fff;font-size:15px;margin:0 0 12px;}
+  footer.site ul{list-style:none;padding:0;margin:0;}
+  footer.site li{margin-bottom:8px;}
+  footer.site a{color:#b9cde6;}
+  footer.site a:hover{color:#fff;}
+  .copy{padding-top:18px;font-size:13px;color:#8ea9c9;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:960px){
+    .hero .wrap{grid-template-columns:1fr;gap:26px;}
+    .g3{grid-template-columns:repeat(2,1fr);}
+    .two-col{grid-template-columns:1fr;}
+    footer.site .cols{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:640px){
+    body{font-size:15.4px;}
+    .hero h1{font-size:23px;}
+    .sec-head h2{font-size:20px;}
+    .g3,.g2{grid-template-columns:1fr;}
+    .train-table{font-size:13.6px;}
+    .train-table th,.train-table td{padding:10px 10px;}
+    footer.site .cols{grid-template-columns:1fr;}
+    nav.main a{padding:10px 12px;font-size:14px;}
+    section.block{padding:32px 0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>京沪高铁出行信息参考 · 购票前请以铁路官方渠道实时信息为准</span>
+    <span>全程约 1,300 公里 · 连接北京与上海及沿线主要城市</span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brandline">
+      <div class="brand">
+        <div class="mark">京沪</div>
+        <div>
+          <b>京沪高铁网上订票指南</b>
+          <small>购票流程 · 车次席别 · 改签退票 · 乘车提示</small>
+        </div>
+      </div>
+      <div class="head-note">本页为信息整理页面，不提供代购与支付服务</div>
+    </div>
+    <nav class="main">
+      <a href="#process">订票流程</a>
+      <a href="#channel">购票渠道</a>
+      <a href="#train">车次与席别</a>
+      <a href="#change">改签退票</a>
+      <a href="#ride">进站乘车</a>
+      <a href="#tips">实用提示</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>京沪高铁网上订票：从选车次到进站乘车的完整思路</h1>
+        <p class="lead">
+          京沪高铁连接北京与上海，沿线经过天津、济南、南京、苏州等城市，是国内客流最密集的高铁通道之一。
+          对大多数旅客来说，<strong>网上订票</strong>是最常用的购票方式：先用官方渠道查询车次与余票，再选择席别、填写乘车人信息并完成支付，
+          之后凭有效身份证件进站乘车。下面按“查票—下单—支付—改签退票—乘车”的顺序，把每一步需要注意的地方讲清楚。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#process">查看订票步骤</a>
+          <a class="btn btn-ghost" href="#faq">阅读常见问题</a>
+        </div>
+      </div>
+      <aside class="quick">
+        <h2>订票前先确认这五件事</h2>
+        <ol>
+          <li>出发站与到达站是否与行程一致，注意同城可能有多个车站。</li>
+          <li>乘车人身份证件信息是否与证件完全一致，姓名不要写错字。</li>
+          <li>出行日期与大致时段，京沪方向早晚高峰车次更紧张。</li>
+          <li>席别预算：二等座、一等座、商务座价格与舒适度不同。</li>
+          <li>是否需要儿童票、学生票等特殊票种，提前了解所需凭证。</li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 订票流程 -->
+  <section class="block" id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>京沪高铁网上订票的基本流程</h2>
+        <p>不同购票平台的界面略有差别，但核心步骤基本一致。以下流程适用于绝大多数网上订票场景。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>查询车次与余票</h3>
+            <p>输入出发站、到达站和乘车日期，系统会列出当天可选车次、发到时刻、历时以及各席别余票情况。京沪方向车次较多，建议同时比较几个相邻时段，避免只盯着一趟车。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>选择车次与席别</h3>
+            <p>根据到达时间、历时和预算选择车次，再选择席别。若某席别显示无票，可以尝试候补购票功能，或在放票时段重新查询。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>添加乘车人信息</h3>
+            <p>填写乘车人真实姓名与有效身份证件号码。为他人购票时，需先将其添加为常用联系人并通过身份核验，否则可能无法出票。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>确认订单并支付</h3>
+            <p>核对车次、日期、席别、乘车人无误后提交订单，并在规定时间内完成支付。超过支付时限，订单通常会自动取消，席位释放回系统。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>获取乘车凭证</h3>
+            <p>目前多数车站支持凭购票时使用的有效身份证件直接检票进站，无需换取纸质车票。如需报销凭证，可按官方规定的方式另行办理。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>按时候车与进站</h3>
+            <p>建议提前到达车站，预留安检、检票和寻找站台的时间。节假日和大客流时段，进站排队时间会明显增加。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 购票渠道 -->
+  <section class="block alt" id="channel">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>购票渠道怎么选</h2>
+        <p>渠道本身不影响车票的有效性，但信息准确度、售后处理效率和账号安全存在差别，建议优先选择官方渠道。</p>
+      </div>
+      <div class="grid g3">
+        <article class="card">
+          <h3>铁路官方线上渠道</h3>
+          <p>铁路部门官方推出的购票应用与网站，是查询余票、下单、改签退票最直接的入口。车次、票价、余票信息以官方系统为准，遇到问题也便于按官方流程处理。</p>
+        </article>
+        <article class="card">
+          <h3>车站售票窗口与自助机</h3>
+          <p>适合不熟悉线上操作、需要现场咨询，或行程临时调整的旅客。窗口可以处理部分线上不便办理的业务，但高峰期需要排队。</p>
+        </article>
+        <article class="card">
+          <h3>第三方代购平台</h3>
+          <p>部分平台提供代购或加速服务，可能收取额外费用。使用前应确认其资质与退改规则，并注意不要向非官方渠道泄露身份证件与支付信息。</p>
+        </article>
+      </div>
+      <div class="notice" style="margin-top:22px;">
+        <h3>关于“抢票加速”要理性看待</h3>
+        <ul>
+          <li>车票由铁路系统统一发售，任何第三方都无法保证一定抢到票。</li>
+          <li>所谓加速包、优先出票多为营销说法，实际效果因车次和时段而异。</li>
+          <li>官方候补购票是较稳妥的补充方式，有票时会按规则自动兑现。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 车次与席别 -->
+  <section class="block" id="train">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>车次类型与席别选择</h2>
+        <p>京沪高铁通道上运行的车次在停站数量、运行时长和票价上有所区别，选择时可结合时间成本与预算综合考虑。</p>
+      </div>
+
+      <table class="train-table">
+        <caption>下表为席别与车次特点的一般性说明，具体车次、票价与运行时刻以购票时官方显示为准。</caption>
+        <thead>
+          <tr>
+            <th>类别</th>
+            <th>主要特点</th>
+            <th>适合人群</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>停站较少的车次</td>
+            <td>中途停靠站数量少，全程耗时相对更短</td>
+            <td>希望尽快到达、时间安排紧凑的旅客</td>
+          </tr>
+          <tr>
+            <td>停站较多的车次</td>
+            <td>沿线停靠城市更多，便于中途上下车</td>
+            <td>前往济南、南京、苏州等沿线城市的旅客</td>
+          </tr>
+          <tr>
+            <td>二等座</td>
+            <td>座位排列较紧凑，价格相对经济</td>
+            <td>大多数日常出行的旅客</td>
+          </tr>
+          <tr>
+            <td>一等座</td>
+            <td>座位更宽，腿部空间更大，车厢人数较少</td>
+            <td>对舒适度有要求、路程较长的旅客</td>
+          </tr>
+          <tr>
+            <td>商务座</td>
+            <td>座椅可调节幅度大，空间与配套服务更完善</td>
+            <td>商务出行或对私密性要求较高的旅客</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="grid g2" style="margin-top:24px;">
+        <article class="card">
+          <h3>怎么判断该选哪一趟车</h3>
+          <ul>
+            <li>先确定必须到达的时间点，再倒推出发时刻，而不是只看哪趟车便宜。</li>
+            <li>比较“出发时刻 + 历时 + 到站后到目的地的通勤时间”，总耗时更短的方案往往更划算。</li>
+            <li>如果目的地在城市另一侧，到达站的选择可能比车次本身更影响整体效率。</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>席别选择的实际考虑</h3>
+          <ul>
+            <li>四五个小时以上的行程，一等座在舒适度上的差别会比较明显。</li>
+            <li>携带大件行李时，优先考虑上下车方便、行李架空间相对充裕的车厢位置。</li>
+            <li>同行多人尽量在同一订单中购票，系统通常会尽量安排相邻座位。</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 改签退票 -->
+  <section class="block alt" id="change">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>改签与退票：行程变化时怎么办</h2>
+        <p>行程临时调整是常见情况，越早处理，可选择的车次和席位通常越多。</p>
+      </div>
+      <div class="two-col">
+        <div>
+          <div class="grid g2">
+            <article class="card">
+              <h3>改签</h3>
+              <p>改签是把已购车票更换为其他车次、日期或席别。通常需要在开车前办理，且以系统实际可售席位为前提。改签后的票价差额按多退少补处理，具体规则以官方说明为准。</p>
+            </article>
+            <article class="card">
+              <h3>退票</h3>
+              <p>退票需在开车前办理，越接近开车时间，手续费比例通常越高。开车后一般不再受理退票，但可能符合改签条件。退款会按原支付渠道返回，到账时间因支付方式而异。</p>
+            </article>
+            <article class="card">
+              <h3>变更到站</h3>
+              <p>若目的地发生变化，部分情况下可通过变更到站功能处理，而不是先退票再重新购买。是否支持以及差额计算方式，需以购票渠道的规则为准。</p>
+            </article>
+            <article class="card">
+              <h3>候补购票</h3>
+              <p>当目标车次无票时，可提交候补需求并预付票款。一旦有旅客退票或系统释放席位，会按候补顺序兑现；未兑现的部分会按规则退回。</p>
+            </article>
+          </div>
+          <div class="notice" style="margin-top:20px;">
+            <h3>几个容易忽略的细节</h3>
+            <ul>
+              <li>同一张票通常只能办理一次改签，改签前先想清楚新的行程。</li>
+              <li>改签和退票都应在官方渠道操作，避免通过非正规途径转让车票。</li>
+              <li>报销凭证与车票本身是两回事，行程变化后如需处理凭证，建议先咨询官方客服。</li>
+            </ul>
+          </div>
+        </div>
+        <aside>
+          <div class="side-box">
+            <h3>处理顺序建议</h3>
+            <ul>
+              <li>先确认新行程的日期与时段</li>
+              <li>查询目标车次是否还有余票</li>
+              <li>有余票优先改签，无票再考虑退票重购</li>
+              <li>时间紧张时优先保证能上车</li>
+            </ul>
+          </div>
+          <div class="side-box">
+            <h3>需要联系客服的情况</h3>
+            <ul>
+              <li>证件信息填写有误</li>
+              <li>订单状态异常或支付未出票</li>
+              <li>涉及特殊票种与优惠资格</li>
+              <li>对退改费用有疑问</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 进站乘车 -->
+  <section class="block" id="ride">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>进站与乘车注意事项</h2>
+        <p>网上订票完成后，真正的行程才刚开始。以下环节最容易出现小状况，提前了解可以少走弯路。</p>
+      </div>
+      <div class="grid g3">
+        <article class="card">
+          <h3>证件与检票</h3>
+          <p>使用购票时登记的有效身份证件通过闸机检票。若证件消磁、过期或无法识别，可走人工通道处理，建议预留额外时间。</p>
+        </article>
+        <article class="card">
+          <h3>车站与站台</h3>
+          <p>同一城市可能有多座车站，出发前务必确认车票上标注的站名。进入候车厅后留意电子屏显示的检票口与站台信息。</p>
+        </article>
+        <article class="card">
+          <h3>行李与安检</h3>
+          <p>按规定接受安全检查，随身行李尺寸与重量需符合要求。充电宝、喷雾类物品等有明确的携带限制，出行前可先行确认。</p>
+        </article>
+        <article class="card">
+          <h3>候车时间安排</h3>
+          <p>一般建议提前 40 分钟以上到站，节假日、雨雪天气或大型活动期间应再提前，以免因排队错过检票。</p>
+        </article>
+        <article class="card">
+          <h3>车上秩序</h3>
+          <p>按车票显示的座位就座，保持车厢安静，接打电话尽量降低音量。餐车与热水处使用高峰时段注意排队秩序。</p>
+        </article>
+        <article class="card">
+          <h3>到站准备</h3>
+          <p>临近到站前提前整理行李，避免列车停稳后匆忙取物。下车后按出站指示牌前往目标出口或换乘通道。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 实用提示 -->
+  <section class="block alt" id="tips">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>让京沪高铁网上订票更顺利的实用提示</h2>
+        <p>这些经验来自日常出行中的常见问题，不涉及具体票价与时刻，可结合自身情况参考。</p>
+      </div>
+      <div class="grid g2">
+        <article class="card">
+          <h3>关于放票与查询时间</h3>
+          <ul>
+            <li>车票按铁路部门规定的预售期发售，具体天数以官方公告为准。</li>
+            <li>不同车站的起售时间可能不同，热门方向建议在起售时点前后多刷新查询。</li>
+            <li>开车前一段时间常有旅客退票，临时出行时可以多查几次。</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>关于账号与支付安全</h3>
+          <ul>
+            <li>尽量在官方渠道登录本人账号操作，不要购买来源不明的“代下单”服务。</li>
+            <li>不向他人透露验证码、支付密码和证件照片。</li>
+            <li>公共设备登录后记得退出账号，避免信息被他人查看。</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>关于同行与家庭出行</h3>
+          <ul>
+            <li>同行人尽量放在同一订单中购买，便于座位安排与统一改退。</li>
+            <li>携带儿童出行需按身高或年龄规定购买相应票种，并准备好相关证件。</li>
+            <li>老人同行时，可优先选择停站少、上下车方便的车次与车厢位置。</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>关于行程衔接</h3>
+          <ul>
+            <li>需要换乘时，两段车次之间应留出足够的间隔，避免前序列车晚点导致误乘。</li>
+            <li>到达站与目的地距离较远时，提前了解地铁、公交或出租车的接驳方式。</li>
+            <li>夜间到达的行程，建议提前确认公共交通的末班时间。</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>京沪高铁网上订票常见问题</h2>
+        <p>以下回答为一般性说明，具体规则请以铁路官方渠道的最新公告为准。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>网上订票后还需要取纸质车票吗？</summary>
+          <p>多数情况下不需要。使用购票时登记的有效身份证件即可直接检票进站。如果确有报销等需求，可按官方规定的方式办理相关凭证，具体以车站和购票渠道说明为准。</p>
+        </details>
+        <details>
+          <summary>为什么同一趟车有时查不到余票，过一会儿又有了？</summary>
+          <p>车票是动态变化的。其他旅客退票、改签，或系统分阶段释放席位，都会让余票数量发生变化。热门时段建议多查询几次，或使用候补购票功能。</p>
+        </details>
+        <details>
+          <summary>可以帮家人朋友买票吗？</summary>
+          <p>可以。需要先把对方添加为常用联系人，并确保姓名和证件号码准确、通过身份核验。乘车时由实际乘车人持本人有效证件进站。</p>
+        </details>
+        <details>
+          <summary>改签和退票哪个更划算？</summary>
+          <p>取决于行程变化程度和时间。如果只是换车次或换时段，改签通常更方便；如果行程取消或日期大幅变动，则可能需要退票后重新购买。具体费用规则以官方说明为准，建议尽早处理。</p>
+        </details>
+        <details>
+          <summary>开车前多久必须完成购票和进站？</summary>
+          <p>购票需在系统允许的时间内完成，通常列车开车前一段时间会停止售票。进站方面，建议至少提前 40 分钟到站，大客流时段应更早，以免因安检和检票排队耽误行程。</p>
+        </details>
+        <details>
+          <summary>第三方平台的“加速抢票”值得买吗？</summary>
+          <p>车票由铁路系统统一发售，第三方无法保证出票结果。是否使用属于个人选择，但应优先通过官方渠道购票和候补，并注意保护个人信息与资金安全。</p>
+        </details>
+        <details>
+          <summary>京沪高铁沿线主要经过哪些城市？</summary>
+          <p>京沪高铁连接北京与上海，沿线经过天津、济南、南京、苏州等城市，并设有多个中间站。具体停靠站以所选车次的运行信息为准。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>京沪高铁网上订票指南</h4>
+        <p style="margin:0;color:#a8c2de;font-size:14px;">
+          本页面围绕京沪高铁网上订票的流程、车次席别选择、改签退票与乘车注意事项进行信息整理，
+          供出行前参考使用。页面不提供购票、代购或支付服务。
+        </p>
+      </div>
+      <div>
+        <h4>页面导航</h4>
+        <ul>
+          <li><a href="#process">订票流程</a></li>
+          <li><a href="#channel">购票渠道</a></li>
+          <li><a href="#train">车次与席别</a></li>
+          <li><a href="#change">改签退票</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>出行提醒</h4>
+        <ul>
+          <li><a href="#ride">进站乘车</a></li>
+          <li><a href="#tips">实用提示</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li>车次、票价与规则以铁路官方渠道实时信息为准</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>信息整理页面 · 内容仅供参考，不构成购票建议</span>
+      <span>出行前请核对车次、日期与车站信息</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+  </html>
